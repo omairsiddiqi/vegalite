@@ -1,0 +1,29 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/omairsiddiqi/vegalite/main/iscea.csv"
+  },
+  "height": 200,
+  "width": 400,
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Type"},
+    "y": {"field": "Count", "type": "quantitative", "aggregate": "count"},
+    "xOffset": {"field": "ICSEA Cat"},
+    "color": {"field": "ICSEA Cat"},
+    "tooltip": [
+      {"field": "ICSEA Cat", "type": "nominal"},
+      {"field": "ICSEA Cat", "type": "quantitative", "aggregate": "count"}
+    ]
+  },
+
+  "selection": {
+    "series": {
+      "type": "multi",
+      "encodings": ["color"],
+      "on": "click",
+      "bind": "legend"
+    }
+  },
+  "transform": [{"filter": {"selection": "series"}}]
+}

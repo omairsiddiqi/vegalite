@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/omairsiddiqi/vegalite/main/finaldatas.csv"
+  },
+  "height": 300,
+  "width": 300,
+  "mark": {"type": "arc", "innerRadius": 100},
+  "encoding": {
+    "theta": {
+      "field": "ICSEA Cat",
+      "type": "quantitative",
+      "aggregate": "count"
+    },
+    "color": {"field": "ICSEA Cat", "type": "nominal"},
+    "tooltip": [
+      {"field": "ICSEA Cat", "type": "nominal"},
+      {"field": "ICSEA Cat", "type": "quantitative", "aggregate": "count"}
+    ],
+    "transform": [{"filter": {"selection": "Select_Sex"}}],
+    "selection": {
+      "Select_Sex": {"type": "nominal", "fields": ["ICSEA Cat"], "bind": "legend"}
+    }
+  },
+  "layer": [
+    {"mark": {"type": "arc", "outerRadius": 100}},
+    {
+      "mark": {"type": "text", "radius": 110},
+      "encoding": {"text": {"field": "ICSEA Cat", "type": "nominal"}}
+    },
+    {
+      "mark": {"type": "text", "radius": 120, "color": "blue"},
+      "encoding": {
+        "text": {
+          "field": "ICSEA Cat",
+          "type": "quantitative",
+          "aggregate": "count"
+        },
+        "color": {"field": "ICSEA Cat", "type": "nominal"}
+      }
+    }
+  ]
+}

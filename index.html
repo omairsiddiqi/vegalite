@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Small Business - Start Bootstrap Template</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+</head>
+<body class="mt-3">
+<!-- Page Content-->
+<div class="container px-4 px-lg-3">
+    <div class="row gx-4 gx-lg-3">
+        <h2 class="card-title" style="text-align: center;">NSW & WA School Ranking Analysis</h2>
+    </div>
+</div>
+<div class="container px-4 px-lg-3">
+    <div class="row gx-4 mt-3 gx-lg-3">
+        <div class="col-md-3 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">Total School</h5>
+                    <p class="card-text fw-bold" style="font-size: 20px; text-align: center; color: #1984c5; ">4453</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">Primary School</h5>
+                    <p class="card-text fw-bold" style="font-size: 20px; text-align: center; color: #1984c5; ">2713</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">Secondary School</h5>
+                    <p class="card-text fw-bold" style="font-size: 20px; text-align: center; color: #1984c5; ">652</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">Combined School</h5>
+                    <p class="card-text fw-bold" style="font-size: 20px; text-align: center; color: #1984c5; ">1029</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Heading Row-->
+    <div class="row gx-4 gx-lg-3 align-items-center my-1">
+        <div class="col-lg-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div id="vis"></div>
+                    <h3 class="card-title">Details</h3>
+                    <p class="card-text" style="text-align: justify !important;">
+                    <ul>
+                        <li>
+                            These visualisations show that the majority of schools in both states are primary, followed by secondary and combined.
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            The most primary, secondary, and combined schools are in major cities, followed by inner regionals and the north metropolitan area.
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            There is only one primary schools with more than 1600 kids in North south wales apart from that all have on average between 100 and 900 children.
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            Secondary high schools and combined schools in major cities and North and South Metropolitan areas have more than 1600 students.
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-4 px-lg-3">
+        <div class="row gx-4 gx-lg-3">
+            <h2 class="card-title" style="text-align: center;">Index of Community Socio-Educational Advantage (ICSEA)</h2>
+        </div>
+    </div>
+    <div class="row gx-4 mt-3 gx-lg-3">
+
+        <div class="col-md-7 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <img src="image.png" width="100%">
+                    <p style="text-align: justify !important;" class="card-text">
+                    <ul>
+                        <li>
+                            A value on the index represents the average level of educational advantage enjoyed by the school's student population in comparison to other schools.
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            The ICSEA offers a numerical scale that measures the degree of this influence, or level of educational advantage, and takes into account factors at both the student and school level.
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            ICSEA is essentially an index that measures the average level of educational advantage received by the student population of the school in comparison to other schools.
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div id="vispiechart"></div>
+                    <h4>ICESA Ratio</h4>
+                    <p class="card-text" style="text-align: justify !important;">
+                        The pie chart below depicts the percentage of Lower, Average, and High ICESA schools in Australia. Any school with a rank less than 800 is considered to have very disadvantaged student backgrounds, while any school with a rank greater than 1200 is considered to have a strong advantage of student background.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row gx-4 gx-lg-3">
+        <div class="col-md-5 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4>ICESA Rank </h4>
+                    <p style="text-align: justify !important;" class="card-text">
+                    <ul>
+                        <li>
+                            Following visualization is further breakdown to ICSEA Rank based on type of schools in austrila showing how many primary school, secondary high school, combined school are ranked on ICSEA System.
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            Most of the Primary School have Average ICSEA rank i.e. 1500 primary school has more then 1000 ICESA rank with around 700 primary school ranges in upper highest category of ICESA rank.
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            Secondary high school most ranges in higher category school with only 3 Secondary high school that rank in lower ICSEA Ranks.
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div width="" id="visbarchart"></div>
+                    <!--                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container px-4 px-lg-3">
+        <div class="row gx-4 gx-lg-3">
+            <h2 class="card-title" style="text-align: center;">High-achieving areas within the State</h2>
+        </div>
+    </div>
+    <div class="row gx-4 mt-3 gx-lg-3">
+        <div class="col-md-8 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div width="" id="visnswbarchart"></div>
+                    <p class="card-text">
+                        The Following Visualization shows the top High-achieving cities within the NSW state.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4>High-achieving cities in NSW</h4>
+                    <p style="text-align: justify !important;" class="card-text">
+                    <ul>
+                        <li>
+                            Albury, Amidala, Dubbo and Sydney has on average high BE score for primary schools in these region.</li>
+                    </ul>
+                    <ul>
+                        <li>
+                            This shows that on average schools in this region contain good quality of education, rank higher in ISCEA score and BE Score.
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            Similarly for Secondary High school we can see that on average most of high school BE score range from 70 to 80 which shows that there are quality of secondary schools is less then primary school in NSW states.
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row gx-4 gx-lg-3">
+        <div class="col-md-8 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div width="" id="viswabarchart"></div>
+                    <p style="text-align: justify !important;" class="card-text">
+                        The following visualization depicts the top few high-achieving cities in the state of WA.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4>High-achieving cities in WA</h4>
+                    <p style="text-align: justify !important;" class="card-text">
+                    <ul>
+                        <li>
+                            West Australian state has more higher rank B.E score schools than North South Wales, with most of them ranging on average between 85 and 98 BE Score.
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            The highest Primary School Average BE Scores are seen in Mosman Park and Mounty Lawley.
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            However, Apart from Joondalup, no other city in Western Australia has a primary school with an average high B.E score and a secondary school.
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Footer-->
+<footer class="py-3 bg-dark">
+    <div class="container px-4 px-lg-3"><p class="m-0 text-center text-white">Copyright &copy; 2022</p></div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<script type="text/javascript">
+    var spec = "https://raw.githubusercontent.com/omairsiddiqi/vegalite/main/map.json?token=GHSAT0AAAAAABZ5HWEX2GM3ECL5U3P74UO4Y2IMHGA";
+    vegaEmbed('#vis', spec).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var piechart = "https://raw.githubusercontent.com/omairsiddiqi/vegalite/main/piechart.json";
+    vegaEmbed('#vispiechart', piechart).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var bar = " https://raw.githubusercontent.com/omairsiddiqi/vegalite/main/barchart.json";
+    vegaEmbed('#visbarchart', bar).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var nswbar = " https://raw.githubusercontent.com/omairsiddiqi/vegalite/main/nswbar.json";
+    vegaEmbed('#visnswbarchart', nswbar).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var wabar = " https://raw.githubusercontent.com/omairsiddiqi/vegalite/main/wabar.json";
+    vegaEmbed('#viswabarchart', wabar).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+</script>
+</body>
+</html>
