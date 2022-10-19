@@ -9,11 +9,11 @@
   "encoding": {
     "x": {"field": "Type"},
     "y": {"field": "Count", "type": "quantitative", "aggregate": "count"},
-    "xOffset": {"field": "ICSEA Cat"},
-    "color": {"field": "ICSEA Cat"},
+    "xOffset": {"field": "ICSEA Ratio"},
+    "color": {"field": "ICSEA Ratio"},
     "tooltip": [
-      {"field": "ICSEA Cat", "type": "nominal"},
-      {"field": "ICSEA Cat", "type": "quantitative", "aggregate": "count"}
+      {"field": "ICSEA Ratio", "type": "nominal"},
+      {"field": "ICSEA Ratio", "type": "quantitative", "aggregate": "count"}
     ]
   },
 
