@@ -8,35 +8,35 @@
   "mark": {"type": "arc", "innerRadius": 100},
   "encoding": {
     "theta": {
-      "field": "ICSEA Cat",
+      "field": "ICSEA Ratio",
       "type": "quantitative",
       "aggregate": "count"
     },
-    "color": {"field": "ICSEA Cat", "type": "nominal"},
+    "color": {"field": "ICSEA Ratio", "type": "nominal"},
     "tooltip": [
-      {"field": "ICSEA Cat", "type": "nominal"},
-      {"field": "ICSEA Cat", "type": "quantitative", "aggregate": "count"}
+      {"field": "ICSEA Ratio", "type": "nominal"},
+      {"field": "ICSEA Ratio", "type": "quantitative", "aggregate": "count"}
     ],
     "transform": [{"filter": {"selection": "Select_Sex"}}],
     "selection": {
-      "Select_Sex": {"type": "nominal", "fields": ["ICSEA Cat"], "bind": "legend"}
+      "Select_Sex": {"type": "nominal", "fields": ["ICSEA Ratio"], "bind": "legend"}
     }
   },
   "layer": [
     {"mark": {"type": "arc", "outerRadius": 100}},
     {
       "mark": {"type": "text", "radius": 110},
-      "encoding": {"text": {"field": "ICSEA Cat", "type": "nominal"}}
+      "encoding": {"text": {"field": "ICSEA Ratio", "type": "nominal"}}
     },
     {
       "mark": {"type": "text", "radius": 120, "color": "blue"},
       "encoding": {
         "text": {
-          "field": "ICSEA Cat",
+          "field": "ICSEA Ratio",
           "type": "quantitative",
           "aggregate": "count"
         },
-        "color": {"field": "ICSEA Cat", "type": "nominal"}
+        "color": {"field": "ICSEA Ratio", "type": "nominal"}
       }
     }
   ]
